@@ -42,12 +42,12 @@ endif()
 # `find_package(llvm)`. So there's no need to add it here.
 list(APPEND CMAKE_PREFIX_PATH "${LT_LLVM_INSTALL_DIR}/lib/cmake/llvm/")
 
-find_package(LLVM 12.0.0 REQUIRED CONFIG)
-
-# Another sanity check
-if(NOT "12" VERSION_EQUAL "${LLVM_VERSION_MAJOR}")
-  message(FATAL_ERROR "Found LLVM ${LLVM_VERSION_MAJOR}, but need LLVM 12")
-endif()
+# find_package(LLVM 12.0.0 REQUIRED CONFIG)
+# 
+# # Another sanity check
+# if(NOT "12" VERSION_EQUAL "${LLVM_VERSION_MAJOR}")
+#   message(FATAL_ERROR "Found LLVM ${LLVM_VERSION_MAJOR}, but need LLVM 12")
+# endif()
 
 message(STATUS "Found LLVM ${LLVM_PACKAGE_VERSION}")
 message(STATUS "Using LLVMConfig.cmake in: ${LT_LLVM_INSTALL_DIR}")
